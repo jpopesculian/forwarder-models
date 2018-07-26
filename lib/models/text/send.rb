@@ -9,7 +9,8 @@ module Models
           sent_time: sms.sent_time,
           from: sms.from,
           to: sms.to,
-          body: sms.body
+          body: sms.body,
+          status: sms.status
         )
       end
     end
