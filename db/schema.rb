@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_26_174814) do
+ActiveRecord::Schema.define(version: 2018_07_27_182332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 2018_07_26_174814) do
   create_table "texts", force: :cascade do |t|
     t.string "guid"
     t.string "twilio_id"
-    t.datetime "received_time"
-    t.datetime "sent_time"
     t.string "from"
     t.string "to"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
+    t.string "direction"
+    t.datetime "time"
   end
 
 end
