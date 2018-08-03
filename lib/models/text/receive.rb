@@ -12,6 +12,7 @@ module Models
           time: sms.time,
           direction: sms.direction
         )
+        text
       end
     end
   end
