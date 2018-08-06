@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_182332) do
+ActiveRecord::Schema.define(version: 2018_08_06_144156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2018_07_27_182332) do
     t.string "status"
     t.string "direction"
     t.datetime "time"
+    t.string "contact"
+    t.index ["contact"], name: "index_texts_on_contact"
   end
 
 end

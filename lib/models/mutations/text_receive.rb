@@ -1,7 +1,9 @@
 module Models
-  class Text
-    class Receive
-      def self.call(sms)
+  module Mutations
+    class TextReceive
+      include Mutation
+
+      def call(sms)
         text = Text.find_or_create_by(guid: sms.id)
         text.update(
           twilio_id: sms.twilio_id,
@@ -10,7 +12,8 @@ module Models
           body: sms.body,
           status: sms.status,
           time: sms.time,
-          direction: sms.direction
+          direction: sms.direction,
+          contact: sms.contact
         )
         text
       end
