@@ -17,4 +17,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'activerecord'
   s.add_runtime_dependency 'evt-settings'
+  s.add_runtime_dependency 'pg'
 end
